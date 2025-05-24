@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BeatSync</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>BeatSync Music Player</h1>
+
+    <!-- Search & Filtering -->
+    <input type="text" id="searchBar" placeholder="Search for albums, artists, or songs...">
+    <select id="genreFilter">
+        <option value="all">All Genres</option>
+        <option value="Electronic">Electronic</option>
+        <option value="Rock">Rock</option>
+        <option value="Jazz">Jazz</option>
+    </select>
+    <select id="sortOptions">
+        <option value="title">Sort by Album Name</option>
+        <option value="artist">Sort by Artist</option>
+        <option value="genre">Sort by Genre</option>
+    </select>
+
+    <!-- Album Grid -->
+    <div class="album-grid" id="albumGrid"></div>
+
+    <!-- Song Panel -->
+    <div class="song-panel" id="songPanel">
+        <button id="closePanel">❌ Close</button>
+        <h2 id="albumTitle">Album Title</h2>
+        <p id="albumArtist">Artist Name</p>
+        <ul id="songList"></ul>
+    </div>
+
+    <!-- Music Controls -->
+    <div class="player">
+        <div class="album-art">
+            <img id="albumCover" src="assets/default-cover.jpg" alt="Album Art">
+        </div>
+        <div class="track-info">
+            <h2 id="trackTitle">Select a song</h2>
+            <p id="artistName">Artist Name</p>
+        </div>
+        <audio id="audioPlayer" controls></audio>
+        
+        <!-- Controls -->
+        <div class="controls">
+            <button id="prevTrack">⏮️</button>
+            <button id="playPause">▶️</button>
+            <button id="nextTrack">⏭️</button>
+            <button id="shuffle">🔀</button>
+        </div>
+
+        <!-- Equalizer -->
+        <div class="equalizer">
+            <label>Bass: <input type="range" id="bass" min="0" max="100"></label>
+            <label>Treble: <input type="range" id="treble" min="0" max="100"></label>
+        </div>
+    </div>
+
+    <!-- Mini Player -->
+    <div class="mini-player" id="miniPlayer">
+        <img id="miniCover" src="assets/default-cover.jpg" alt="Album Art">
+        <div class="mini-info">
+            <p id="miniTitle">Song Title</p>
+            <p id="miniArtist">Artist</p>
+        </div>
+        <div class="mini-controls">
+            <button id="miniPrev">⏮️</button>
+            <button id="miniPlayPause">▶️</button>
+            <button id="miniNext">⏭️</button>
+            <button id="miniExpand">🔍 Expand</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #181818;
+    color: white;
+    text-align: center;
+}
+
+.album-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+
+.album {
+    background: linear-gradient(135deg, #252525, #1a1a1a);
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.album:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.2);
+}
